@@ -7,7 +7,15 @@ Route::get('/', function () {
 });
 
 Route::get('/audrey', function () {
-    return view('halo.blade.php');
+    return view('halo');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 
 use App\Http\Controllers\CipherController;
