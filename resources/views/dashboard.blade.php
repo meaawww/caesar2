@@ -1,19 +1,23 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>
-        DASHBOARD
-    </title>
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <h2>
-        INI DASHBOARD
-    </h2>
-    <a href="login"><button>
-            KEMBALI
-        </button>
-    </a>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="card p-4 shadow text-center">
+            <h2>Dashboard</h2>
+            <p>Selamat datang, kamu berhasil login!</p>
+
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
 </body>
 
 </html>
