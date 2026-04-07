@@ -17,3 +17,5 @@ Route::get('/audrey', function () {
 
 Route::get('/cipher', [CipherController::class, 'index']);
 Route::post('/cipher', [CipherController::class, 'process']);
+Route::get('/dashboard', [AuthController::class, 'dashboard'])
+    ->middleware('auth.login');
