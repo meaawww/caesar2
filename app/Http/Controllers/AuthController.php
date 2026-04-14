@@ -26,13 +26,16 @@ class AuthController extends Controller
 
         return back()->with('error', 'Login gagal!');
     }
+
     public function dashboard()
     {
         if (!session('login')) {
-            return redirect('/');
+            return redirect('/login');
         }
 
-        return view('dashboard');
+        $users = DB::table('pengguna')->get(); // ambil semua data
+
+        return view('dashboard', compact('users'));
     }
 
     public function logout()

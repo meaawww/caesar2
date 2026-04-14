@@ -8,6 +8,32 @@
 </head>
 
 <body class="bg-light">
+    <a href="/create">+ Tambah User</a>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Aksi</th>
+        </tr>
+
+        @foreach($users as $user)
+        <tr>
+            <td>{{ $user->id_pengguna }}</td>
+            <td>{{ $user->username }}</td>
+            <td>
+                <a href="/edit/{{ $user->id_pengguna }}">Edit</a>
+
+                <form action="/delete/{{ $user->id_pengguna }}" method="POST" style="display:inline;">
+                    @csrf
+                    <button onclick="return confirm('Yakin mau hapus?')">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </table>
 
     <div class="container mt-5">
         <div class="card p-4 shadow text-center">
